@@ -20,7 +20,7 @@ install:
 
 build_script:
   - IF EXIST .git\shallow (git fetch --unshallow)
-  - C:\projects\julia\bin\julia -e "import Compat.Pkg; versioninfo(); Pkg.clone(pwd(), \"CondaBinDeps\"); Pkg.build(\"CondaBinDeps\")"
+  - C:\projects\julia\bin\julia -e "versioninfo(); Pkg.clone(pwd(), \"CondaBinDeps\"); Pkg.build(\"CondaBinDeps\")"
 
 test_script:
   - C:\projects\julia\bin\julia --check-bounds=yes -e "Pkg.test(\"CondaBinDeps\")"
