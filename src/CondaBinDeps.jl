@@ -21,7 +21,8 @@ provides(CondaBinDeps.Manager, "libnetcdf", netcdf)
 ```
 """
 module CondaBinDeps
-using Conda
+import Conda
+using BinDeps
 
 include("bindeps_conda.jl")
 

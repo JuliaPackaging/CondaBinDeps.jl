@@ -1,6 +1,4 @@
 # This file contains the necessary ingredients to create a PackageManager for BinDeps
-using BinDeps
-
 struct EnvManager{T} <: BinDeps.PackageManager
     packages::Vector{String}
 end
