@@ -1,6 +1,6 @@
 # CondaBinDeps.jl
 
-This package, which builds on the [Conda.jl package](https://github.com/JuliaPy/Conda.jl) allows one to use [conda](http://conda.pydata.org/) as a [BinDeps](https://github.com/JuliaLang/BinDeps.jl) binary
+This package, which builds on the [Conda.jl package](https://github.com/JuliaPy/Conda.jl) allows one to use [conda](http://conda.pydata.org/) as a [BinDeps](https://github.com/JuliaPackaging/BinDeps.jl) binary
 provider for Julia. While other binary providers like
 [Homebrew.jl](https://github.com/JuliaLang/Homebrew.jl),
 [AptGet](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool#apt-get) or
@@ -27,7 +27,7 @@ up `conda` environments, etcetera.
 ## BinDeps integration: using Conda.jl as a package author
 
 CondaBinDeps.jl can be used as a `Provider` for
-[BinDeps](https://github.com/JuliaLang/BinDeps.jl) with the `Conda.Manager`
+[BinDeps](https://github.com/JuliaPackaging/BinDeps.jl) with the `Conda.Manager`
 type. You first need to write a [conda
 recipe](http://conda.pydata.org/docs/building/recipe.html), and upload the
 corresponding build to [binstar](https://binstar.org/). Then, add CondaBinDeps in your
