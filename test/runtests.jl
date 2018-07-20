@@ -5,8 +5,8 @@ import CondaBinDeps.Conda
 testenv = :CondaBinDeps_test
 TestManager = CondaBinDeps.EnvManager{testenv}
 
-if "libuuid" in Conda._installed_packages(testenv)
-    Conda.rm("libuuid", testenv)
+if "libpng" in Conda._installed_packages(testenv)
+    Conda.rm("libpng", testenv)
 end
 
 # force installation by Conda
@@ -14,15 +14,15 @@ empty!(BinDeps.defaults)
 push!(BinDeps.defaults, BinDeps.PackageManager)
 
 @BinDeps.setup
-libuuid = library_dependency("libuuid")
-provides(TestManager, "libuuid", libuuid)
-@BinDeps.install Dict(:libuuid => :libuuid_lib)
+libpng = library_dependency("libpng")
+provides(TestManager, "libpng", libpng)
+@BinDeps.install Dict(:libpng => :libpng_lib)
 
-@test "libuuid" in Conda._installed_packages(testenv)
+@test "libpng" in Conda._installed_packages(testenv)
 
 deps = joinpath(@__DIR__, "deps.jl")
 @test isfile(deps)
 include(deps)
-@test isfile(libuuid_lib)
+@test isfile(libpng_lib)
 
-Conda.rm("libuuid", testenv)
+Conda.rm("libpng", testenv)
