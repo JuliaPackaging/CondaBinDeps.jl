@@ -6,7 +6,7 @@ struct EnvManager{T} <: BinDeps.PackageManager
 end
 
 "Manager for root environment"
-const Manager = EnvManager{Symbol(PREFIX)}
+const Manager = EnvManager{Symbol(Conda.PREFIX)}
 
 function Base.show(io::IO, manager::EnvManager)
     print(io, "Conda packages: ", join(manager.packages, ", "))
