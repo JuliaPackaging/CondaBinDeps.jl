@@ -24,7 +24,7 @@ empty!(BinDeps.defaults)
 push!(BinDeps.defaults, BinDeps.PackageManager)
 
 @BinDeps.setup
-libpng = library_dependency("libpng")
+libpng = library_dependency("libpng", aliases = ["libpng16"])
 provides(TestManager, "libpng", libpng)
 @BinDeps.install Dict(:libpng => :libpng_lib)
 
