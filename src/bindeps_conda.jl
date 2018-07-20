@@ -33,7 +33,7 @@ BinDeps.provider(::Type{EnvManager{T}}, packages::AbstractString; opts...) where
 
 function BinDeps.generate_steps(dep::BinDeps.LibraryDependency, manager::EnvManager, opts)
     pkgs = manager.packages
-    ()->Conda.install(pkgs, manager)
+    ()->install(pkgs, manager)
 end
 
 function install(pkgs, manager::EnvManager{T}) where {T}

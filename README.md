@@ -1,5 +1,8 @@
 # CondaBinDeps.jl
 
+[![Build Status — OS X and Linux](https://travis-ci.org/JuliaPackaging/CondaBinDeps.jl.svg?branch=master)](https://travis-ci.org/JuliaPackaging/CondaBinDeps.jl)
+[![Build status — Windows](https://ci.appveyor.com/api/projects/status/utfqcbtfjm385xwb?svg=true)](https://ci.appveyor.com/project/StevenGJohnson/condabindeps-jl)
+
 This package, which builds on the [Conda.jl package](https://github.com/JuliaPy/Conda.jl) allows one to use [conda](http://conda.pydata.org/) as a [BinDeps](https://github.com/JuliaPackaging/BinDeps.jl) binary
 provider for Julia. While other binary providers like
 [Homebrew.jl](https://github.com/JuliaLang/Homebrew.jl),
