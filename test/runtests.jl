@@ -5,16 +5,6 @@ import CondaBinDeps.Conda
 testenv = :CondaBinDeps_test
 TestManager = CondaBinDeps.EnvManager{testenv}
 
-Conda.add("libpng", testenv)
-
-# debugging output
-prfx = Conda.prefix(testenv)
-println(stderr, "CONTENTS OF ", prfx, " :")
-for (dir, dirs, files) in walkdir(prfx)
-    println(stderr, "  ", replace(dir, prfx => "<prefix>"), " : ",
-            join(files, " "))
-end
-
 if "libpng" in Conda._installed_packages(testenv)
     Conda.rm("libpng", testenv)
 end
