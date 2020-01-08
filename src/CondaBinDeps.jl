@@ -1,5 +1,3 @@
-VERSION < v"0.7.0-beta2.199" && __precompile__()
-
 """
 The CondaBinDeps module provides access to the [conda](http://conda.pydata.org/) packages
 manager as a BinDeps provider, to install binary

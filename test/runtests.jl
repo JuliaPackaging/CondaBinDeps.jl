@@ -1,4 +1,4 @@
-using CondaBinDeps, Compat, Compat.Test, BinDeps
+using CondaBinDeps, Test, BinDeps
 import CondaBinDeps.Conda
 
 # manager for test environment
